@@ -1,0 +1,14 @@
+{
+    "title": "jackness Wiki",
+    "description": "tech mark",
+    "language": "zh-hans",
+    "links": {
+        "sidbar": {
+            "home": "http://www.jackness.org"
+        }
+    },
+    "root": ".",
+    "plugins": {
+
+    }
+}
