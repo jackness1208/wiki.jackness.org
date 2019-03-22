@@ -15,6 +15,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "94:f5:9c:ec:49:b8:92:ad:18:10:16:55:49:f8:e5:a6"
+      - run: gitbook instal
       - run: gitbook build
       - run: ssh-keyscan 114.215.151.192 >> ~/.ssh/known_hosts
       - run: scp -r ~/project/_book/* jackness@114.215.151.192:/www/wiki.jackness.org
