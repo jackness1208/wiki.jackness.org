@@ -95,3 +95,14 @@ declare class a {
   constructor(): void;
 }
 ```
+
+## array
+### 指定字段 array
+#### origin
+```javascript
+const arr = [error, res, body];
+```
+#### declare
+```typescript
+type arr => [Error | undefined, any, any];
+```
