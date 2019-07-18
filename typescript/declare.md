@@ -106,3 +106,19 @@ const arr = [error, res, body];
 ```typescript
 type arr => [Error | undefined, any, any];
 ```
+
+## global
+### 全局变量
+#### origin
+```javascript
+window.header();
+```
+
+#### declare
+```typescript
+declare global {
+  interface Window {
+    header(): any;
+  }
+}
+```
