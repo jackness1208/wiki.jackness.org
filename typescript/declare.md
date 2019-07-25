@@ -96,6 +96,42 @@ declare class a {
 }
 ```
 
+### class 方法 多态
+#### origin
+```javascript
+new a();
+a.val() // :string
+a.val('abc') // :this
+```
+#### declare
+```typescript
+declare class a {
+  constructor();
+  public val(str: string): this
+  public val(): string
+}
+```
+#### typescript
+```typescript
+class a {
+  public txt: string
+  constructor() {
+    this.txt = ''
+  }
+  public val(str): this
+  public val(): string
+  public val(str?: string) {
+    if (str) {
+      this.txt = str
+      return this
+    } else {
+      return this.txt
+    }
+  }
+
+}
+```
+
 ## array
 ### 指定字段 array
 #### origin
