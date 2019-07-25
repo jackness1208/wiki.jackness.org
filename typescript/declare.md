@@ -77,7 +77,7 @@ class a {
 #### declare
 ```typescript
 declare class a {
-  constructor(a: any, b: any): void;
+  constructor(a: any, b: any);
   fn1(): void;
 }
 ```
@@ -92,7 +92,7 @@ a.isSupported
 ```typescript
 declare class a {
   static isSupported: boolean;
-  constructor(): void;
+  constructor();
 }
 ```
 
@@ -108,7 +108,7 @@ type arr => [Error | undefined, any, any];
 ```
 
 ## global
-### 全局变量
+### 全局变量 - function
 #### origin
 ```javascript
 window.header();
@@ -119,6 +119,23 @@ window.header();
 declare global {
   interface Window {
     header(): any;
+  }
+}
+```
+### 全局变量 - class
+#### origin
+```javascript
+new hiidoEvent();
+```
+
+#### declare
+```typescript
+declare class IHiidoEvent {
+  constructor(id: tring, type: string)
+}
+declare global {
+  interface Window {
+    hiidoEvent: typeof IHiidoEvent
   }
 }
 ```
