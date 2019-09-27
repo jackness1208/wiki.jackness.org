@@ -175,3 +175,21 @@ declare global {
   }
 }
 ```
+
+### 注释声明
+```typescript
+interface IFa {
+  /**
+   * @param a 注释内容
+   * @param b 注释内容
+   */
+  typeA(a: string, b: number): string
+
+  /**
+   * @param op op.a 注释内容;
+   * @param op op.b 注释内容
+   */
+  typeB(op: { a: string, b: string}): string
+}
+declare const fa: IFa
+```
