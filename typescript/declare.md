@@ -193,3 +193,16 @@ interface IFa {
 }
 declare const fa: IFa
 ```
+
+### 枚举
+```typescript
+// declare
+enum EStatus {
+  PLAY = 'play',
+  STOP = 'stop',
+  PAUSE = 'pause'
+}
+
+// usage
+const a = EStatus.PLAY
+```
